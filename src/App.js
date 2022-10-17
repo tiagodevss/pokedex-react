@@ -57,6 +57,7 @@ export default function App() {
         <div className="dadosPokemon">
           {pokemon && (
             <div key={pokemon.id}>
+              {console.log(pokemon)}
               {isLoading ? (
                 <FadeLoader />
               ) : (
@@ -64,7 +65,7 @@ export default function App() {
                   <h2 className="nomePokemon">{pokemon.name}</h2>
                   <img
                     className="imagemPokemon"
-                    src={pokemon.sprites['front_default']}
+                    src={pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}
                     alt={pokemon.name}
                   />
                   <div className='tipos'>
